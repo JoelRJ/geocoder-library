@@ -262,7 +262,7 @@ class MapricotMap extends HTMLElement{
       }        
     }
   }
-  getAreasList() {
+  getArea() {
     return this.config.areaList.total
   }                
   addEventListeners() {
@@ -293,7 +293,7 @@ class MapricotMap extends HTMLElement{
     window.appEventBus.addEventListener('user-map-changes-save', (data) => {          
         //Make all items within Mapbox draw selected
         this.assets.draw.changeMode('static')
-        console.log(this.getAreasList())
+        console.log(this.getArea())
     })    
 
     //Perform when the polygon mode button is clicked over the map
