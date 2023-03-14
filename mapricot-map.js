@@ -263,7 +263,7 @@ class MapricotMap extends HTMLElement{
     }
   }
   getAreasList() {
-    return this.config.areaList
+    return this.config.areaList.total
   }                
   addEventListeners() {
 

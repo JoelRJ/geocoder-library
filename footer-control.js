@@ -108,7 +108,7 @@ tplFooterControl.innerHTML = `
   </div>
   <div class="onfinish">
     <button class="footer-btn edit">Edit Roofs</button>
-    <button class="footer-btn proceed">Continue</button>
+    <button class="footer-btn proceed" type="submit">Continue</button>
   </div>  
 </div>`
 
@@ -222,7 +222,7 @@ class FooterControl extends HTMLElement{
     
     this.shadowRoot.querySelector(".proceed").addEventListener("click", (e)=>{
       const maps = document.getElementsByTagName('mapricot-map')
-      alert(`*** RESULTS *** - This is an alert box containing the below list of areas. Feel free to replace this with the desired action in footer-control-js L220-224. ${JSON.stringify(maps[0].getAreasList())}`)
+      DT.setField('roof_square_feet', JSON.stringify(maps[0].getArea()))
     })    
   }   
 }
